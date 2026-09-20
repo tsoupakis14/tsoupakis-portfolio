@@ -10,6 +10,65 @@ window.portfolioData = {
     { number: "03", title: "Fun Quiz", type: "Quiz", description: "A fun quiz packed with surprising questions to test your knowledge and keep you entertained.", thumbnail: "assets/thumbnails/project-03.png", url: "https://script.google.com/macros/s/AKfycbwaOjcbJKPLoguRQKUeBI5E_qTJfhJoyaSOLghtDii1lvXY7mUfu8kOyGA0EU02COz42w/exec" }
   ],
   media: [
-    // { title: "Media title", type: "Video", year: "2026", description: "Short description.", thumbnail: "assets/thumbnails/file.webp", viewUrl: "https://...", downloadUrl: "", featured: false }
-  ]
+  {
+    title: "Media Project 01",
+    type: "Graphic",
+    year: "2026",
+    description: "A short description of this creative project.",
+    thumbnail: "assets/thumbnails/media-01.png",
+    viewUrl: "",
+    downloadUrl: "",
+    featured: true
+  },
+  {
+    title: "Media Project 02",
+    type: "Graphic",
+    year: "2026",
+    description: "A short description of this creative project.",
+    thumbnail: "assets/thumbnails/media-02.png",
+    viewUrl: "",
+    downloadUrl: "",
+    featured: true
+  },
+  {
+    title: "Media Project 03",
+    type: "Graphic",
+    year: "2026",
+    description: "A short description of this creative project.",
+    thumbnail: "assets/thumbnails/media-03.png",
+    viewUrl: "",
+    downloadUrl: "",
+    featured: true
+  },
+  {
+    title: "Media Project 03",
+    type: "Graphic",
+    year: "2026",
+    description: "A short description of this creative project.",
+    thumbnail: "assets/thumbnails/media-04.png",
+    viewUrl: "",
+    downloadUrl: "",
+    featured: true
+  },
+  {
+    title: "Media Project 03",
+    type: "Graphic",
+    year: "2026",
+    description: "A short description of this creative project.",
+    thumbnail: "assets/thumbnails/media-05.png",
+    viewUrl: "",
+    downloadUrl: "",
+    featured: true
+  },
+  {
+    title: "Media Project 03",
+    type: "Graphic",
+    year: "2026",
+    description: "A short description of this creative project.",
+    thumbnail: "assets/thumbnails/media-06.png",
+    viewUrl: "",
+    downloadUrl: "",
+    featured: true
+  }
+]
 };
