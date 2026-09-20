@@ -88,3 +88,17 @@ h3,
     grid-template-columns: 1fr;
   }
 }
+/* Show complete media images without cropping */
+.media-thumb {
+  aspect-ratio: auto;
+  height: auto;
+  overflow: visible;
+}
+
+.media-thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  padding: 0;
+}
