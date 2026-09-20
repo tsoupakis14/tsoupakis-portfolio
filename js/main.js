@@ -20,6 +20,8 @@
   function renderGames() {
     $('#games-grid').innerHTML = data.games.map((item, index) => `<article class="game-card reveal">
       <a href="${safeUrl(item.url)}" target="_blank" rel="noopener noreferrer" aria-label="Launch ${escapeHTML(item.title)} in a new tab">
+        <div class="game-number">${escapeHTML(item.number)}</div>
+        
         <div class="game-visual ${item.thumbnail ? 'has-image' : ''}">
   ${item.thumbnail
     ? `<img src="${safeUrl(item.thumbnail)}" alt="" loading="lazy" width="800" height="500">`
