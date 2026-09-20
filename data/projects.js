@@ -15,7 +15,7 @@ window.portfolioData = {
     type: "Graphic",
     year: "2026",
     description: "A short description of this creative project.",
-    thumbnail: "assets/images/media-01.png",
+    thumbnail: "assets/images/media-01.jpg",
     viewUrl: "",
     downloadUrl: "",
     featured: true
@@ -25,7 +25,7 @@ window.portfolioData = {
     type: "Graphic",
     year: "2026",
     description: "A short description of this creative project.",
-    thumbnail: "assets/images/media-02.png",
+    thumbnail: "assets/images/media-02.jpg",
     viewUrl: "",
     downloadUrl: "",
     featured: true
@@ -35,7 +35,7 @@ window.portfolioData = {
     type: "Graphic",
     year: "2026",
     description: "A short description of this creative project.",
-    thumbnail: "assets/images/media-03.png",
+    thumbnail: "assets/images/media-03.jpg",
     viewUrl: "",
     downloadUrl: "",
     featured: true
@@ -45,7 +45,7 @@ window.portfolioData = {
     type: "Graphic",
     year: "2026",
     description: "A short description of this creative project.",
-    thumbnail: "assets/images/media-04.png",
+    thumbnail: "assets/images/media-04.jpg",
     viewUrl: "",
     downloadUrl: "",
     featured: true
@@ -55,7 +55,7 @@ window.portfolioData = {
     type: "Graphic",
     year: "2026",
     description: "A short description of this creative project.",
-    thumbnail: "assets/images/media-05.png",
+    thumbnail: "assets/images/media-05.jpg",
     viewUrl: "",
     downloadUrl: "",
     featured: true
@@ -65,7 +65,7 @@ window.portfolioData = {
     type: "Graphic",
     year: "2026",
     description: "A short description of this creative project.",
-    thumbnail: "assets/images/media-06.png",
+    thumbnail: "assets/images/media-06.jpg",
     viewUrl: "",
     downloadUrl: "",
     featured: true
