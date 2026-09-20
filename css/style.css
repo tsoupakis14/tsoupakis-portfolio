@@ -25,3 +25,18 @@ h3,
 .contact h2 {
   font-weight: 500;
 }
+.game-visual.has-image::before,
+.game-visual.has-image::after {
+  display: none;
+}
+
+.game-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s var(--ease);
+}
+
+.game-card > a:hover .game-visual img {
+  transform: scale(1.035);
+}
