@@ -330,3 +330,27 @@ main > .contact {
   margin: 0;
   text-align: center;
 }
+/* Wider education columns */
+.education {
+  grid-template-columns: minmax(0, 1.35fr) minmax(420px, 1fr);
+  gap: clamp(6rem, 12vw, 14rem);
+  align-items: start;
+}
+
+.education > div:first-child {
+  max-width: 46rem;
+}
+
+.education-list {
+  width: 100%;
+}
+@media (max-width: 900px) {
+  .education {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .education > div:first-child {
+    max-width: 100%;
+  }
+}
