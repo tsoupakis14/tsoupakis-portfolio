@@ -41,7 +41,32 @@
     </article>`).join('');
   }
 
-  const skillGroups = { Web: ['WordPress','Elementor','HTML','CSS','JavaScript'], Marketing: ['SEO','Google Search Console','Google Analytics','Google Ads','Google Business Profile','Meta Ads','HubSpot Email Marketing'], Creative: ['Canva','Photoshop'], Content: ['Social Media Management','Content Management'] };
+  const skillGroups = {
+  'Web & Development': [
+    'WordPress',
+    'Elementor',
+    'HTML',
+    'CSS',
+    'JavaScript'
+  ],
+  'Digital Marketing': [
+    'SEO',
+    'Google Search Console',
+    'Google Analytics',
+    'Google Ads',
+    'Google Business Profile',
+    'Meta Ads',
+    'HubSpot Email Marketing'
+  ],
+  'Δημιουργία': [
+    'Canva',
+    'Photoshop'
+  ],
+  'Περιεχόμενο': [
+    'Διαχείριση Social Media',
+    'Διαχείριση Περιεχομένου'
+  ]
+};
   function renderSkills() { $('#skills').innerHTML = Object.entries(skillGroups).map(([group, items]) => `<article class="skill-group reveal"><p>${group}</p><div>${items.map(item => `<span>${escapeHTML(item)}</span>`).join('')}</div></article>`).join(''); }
 
   renderSelectedWork(); renderGames(); renderMedia(); renderSkills();
