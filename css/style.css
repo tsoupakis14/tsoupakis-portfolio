@@ -103,14 +103,33 @@ h3,
   font-family: "Inter", system-ui, sans-serif;
 }
 
+body,
 p,
 a,
-span,
 button,
+.hero-copy,
+.about-copy,
+.game-info > span,
+.card-content > span,
+.media-body > span,
+.skill-group span,
+.timeline-meta,
 .timeline-date,
 .education-list article > span,
+.contact-links span,
 footer {
   font-size: var(--font-text);
+}
+
+/* Τα span μέσα στους τίτλους ακολουθούν το μέγεθος του τίτλου */
+h1 span,
+h2 span,
+h3 span,
+.hero h1 span,
+.about-lead span,
+.contact h2 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .game-info h3,
