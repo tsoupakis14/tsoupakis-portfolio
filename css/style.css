@@ -284,3 +284,44 @@ main > .contact {
 .education-list article:first-child {
   border-top: 0;
 }
+.timeline dl div {
+  border-top: 0;
+}
+/* Unified contact and footer section */
+.contact {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 0;
+  border: 0;
+}
+
+.contact-main {
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.contact-links a {
+  border-top: 0;
+}
+
+.contact footer {
+  width: 100%;
+  margin: 0;
+  padding: 2rem 0;
+  border: 0;
+  background: transparent;
+}
+
+@media (max-width: 700px) {
+  .contact {
+    min-height: 100svh;
+    padding-top: 7rem;
+  }
+
+  .contact footer {
+    align-items: flex-start;
+  }
+}
