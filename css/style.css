@@ -356,7 +356,7 @@ main > .contact {
 }
 /* Three-level typography system */
 :root {
-  --font-text: 1rem;
+  --font-text: 1.1rem;
   --font-title: clamp(1.25rem, 1.5vw, 1.75rem);
   --font-display: clamp(2.8rem, 4.8vw, 5.5rem);
 }
@@ -398,4 +398,14 @@ h3,
 .contact h2 {
   font-size: var(--font-display);
   line-height: 1;
+}
+/* Skill category labels as normal text */
+.skill-group > p {
+  font-family: "JetBrains Mono", monospace;
+  font-size: var(--font-text);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--text);
 }
