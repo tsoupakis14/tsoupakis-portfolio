@@ -192,7 +192,7 @@ h3,
 /* Keep mobile navigation button on the right */
 @media (max-width: 700px) {
   .site-header {
-    justify-content: flex-end;
+    justify-content: center;
   }
 
   .section-heading {
