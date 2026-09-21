@@ -273,3 +273,10 @@ main > .contact {
   position: absolute;
   right: 1.25rem;
 }
+.games-list {
+  border-top: 0;
+}
+
+.game-card > a {
+  border-bottom: 0;
+}
