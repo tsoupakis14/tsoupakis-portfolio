@@ -1513,3 +1513,181 @@ footer p,
     gap: 0.5rem;
   }
 }
+/* =========================================
+   ΠΟΡΕΙΑ — ΕΜΠΕΙΡΙΑ ΚΑΙ ΣΠΟΥΔΕΣ
+   ========================================= */
+
+.journey-section {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--surface);
+}
+
+.journey-heading {
+  width: 100%;
+  margin-bottom: clamp(4rem, 7vw, 7rem);
+  text-align: center;
+}
+
+.journey-heading h2 {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: var(--font-display);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+
+/* Δύο βασικές στήλες */
+.journey-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(4rem, 10vw, 12rem);
+  width: 100%;
+}
+
+.journey-column {
+  min-width: 0;
+}
+
+/* ΕΜΠΕΙΡΙΑ / ΣΠΟΥΔΕΣ */
+.journey-label {
+  margin: 0 0 2.5rem;
+  color: var(--accent-2);
+  font-family: "JetBrains Mono", monospace;
+  font-size: var(--font-text);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+/* Κάθε εγγραφή */
+.journey-item {
+  margin: 0 0 3.5rem;
+  padding: 0;
+  border: 0;
+}
+
+.journey-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Οργανισμός και ημερομηνία */
+.journey-meta {
+  margin: 0 0 0.8rem;
+  color: var(--muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: var(--font-text);
+  line-height: 1.5;
+}
+
+/* Τίτλος θέσης ή σπουδών */
+.journey-item h3 {
+  margin: 0;
+  color: var(--text);
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: var(--font-title);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+/* Περιγραφές */
+.journey-description {
+  margin: 0.7rem 0 0;
+  color: var(--muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: var(--font-text);
+  line-height: 1.6;
+}
+
+/* Ημερομηνίες DigitalPro */
+.journey-dates {
+  margin-top: 2rem;
+}
+
+.journey-dates p {
+  display: grid;
+  grid-template-columns: minmax(11rem, 0.8fr) 1.5fr;
+  gap: 1.5rem;
+  margin: 0 0 1rem;
+}
+
+.journey-dates span {
+  color: var(--muted);
+  font-size: var(--font-text);
+}
+
+.journey-dates strong {
+  color: var(--text);
+  font-size: var(--font-text);
+  font-weight: 600;
+}
+
+/* Γλώσσες */
+.journey-languages > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 3rem;
+}
+
+.journey-languages h3 {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.journey-languages h3 span {
+  color: var(--muted);
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  .journey-grid {
+    gap: 4rem;
+  }
+
+  .journey-dates p {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+}
+
+/* Κινητό */
+@media (max-width: 700px) {
+  .journey-section {
+    min-height: 100svh;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+
+  .journey-heading {
+    margin-bottom: 4rem;
+  }
+
+  .journey-grid {
+    grid-template-columns: 1fr;
+    gap: 5rem;
+  }
+
+  .journey-item {
+    margin-bottom: 3rem;
+  }
+
+  .journey-dates p {
+    display: block;
+    margin-bottom: 1.4rem;
+  }
+
+  .journey-dates span,
+  .journey-dates strong {
+    display: block;
+  }
+
+  .journey-dates strong {
+    margin-top: 0.25rem;
+  }
+}
