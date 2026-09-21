@@ -250,3 +250,16 @@ main > .contact {
     justify-content: flex-start;
   }
 }
+.hero h1 {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: clamp(2.8rem, 4.8vw, 5.5rem);
+  line-height: 1;
+  letter-spacing: -0.055em;
+  max-width: 62rem;
+}
+@media (max-width: 700px) {
+  .hero h1 {
+    font-size: clamp(2.6rem, 11vw, 4rem);
+    line-height: 1.02;
+  }
+}
