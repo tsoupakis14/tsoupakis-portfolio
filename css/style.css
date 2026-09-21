@@ -263,3 +263,13 @@ main > .contact {
     line-height: 1.02;
   }
 }
+.hero-actions .button-primary {
+  position: relative;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-actions .button-primary span {
+  position: absolute;
+  right: 1.25rem;
+}
