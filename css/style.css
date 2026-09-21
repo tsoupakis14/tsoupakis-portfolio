@@ -280,3 +280,7 @@ main > .contact {
 .game-card > a {
   border-bottom: 0;
 }
+.education-list article,
+.education-list article:first-child {
+  border-top: 0;
+}
