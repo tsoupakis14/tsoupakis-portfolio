@@ -354,3 +354,48 @@ main > .contact {
     max-width: 100%;
   }
 }
+/* Three-level typography system */
+:root {
+  --font-text: 1rem;
+  --font-title: clamp(1.25rem, 1.5vw, 1.75rem);
+  --font-display: clamp(2.8rem, 4.8vw, 5.5rem);
+}
+
+/* 1. Normal text */
+body,
+p,
+.site-nav a,
+.hero-copy,
+.about-copy,
+.timeline-meta,
+.timeline-date,
+.section-number,
+.education-list span,
+.skill-group span,
+.contact-links span,
+footer {
+  font-size: var(--font-text);
+}
+
+/* 2. Small titles */
+h3,
+.game-info h3,
+.card-content h3,
+.media-body h3,
+.timeline h3,
+.education-list h3,
+.contact-links strong,
+.skill-group > p {
+  font-size: var(--font-title);
+  line-height: 1.2;
+}
+
+/* 3. Large titles */
+.hero h1,
+.section-heading h2,
+.about-lead,
+.education h2,
+.contact h2 {
+  font-size: var(--font-display);
+  line-height: 1;
+}
