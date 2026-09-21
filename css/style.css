@@ -1691,3 +1691,133 @@ footer p,
     margin-top: 0.25rem;
   }
 }
+/* =========================================
+   ΣΧΕΤΙΚΑ — ΤΕΛΙΚΗ ΔΙΑΤΑΞΗ
+   ========================================= */
+
+.about-section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Μικρός τίτλος ΣΧΕΤΙΚΑ */
+.about-section .section-heading {
+  width: min(100%, 68rem);
+  margin: 0 auto 3rem 0;
+  text-align: left;
+}
+
+.about-section .section-heading h2 {
+  color: var(--accent-2);
+  font-family: "JetBrains Mono", monospace;
+  font-size: var(--font-text);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.18em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+/* Μεγάλο κείμενο πάνω, μικρά κείμενα κάτω */
+.about-layout {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3rem;
+  width: min(100%, 68rem);
+}
+
+/* Μεγάλο κείμενο — περιορισμένο πλάτος */
+.about-lead {
+  width: 100%;
+  max-width: 68rem;
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: clamp(2.8rem, 4.2vw, 4.8rem);
+  font-weight: 700;
+  line-height: 1.06;
+  letter-spacing: -0.045em;
+}
+
+/* Χρωματισμένο μέρος */
+.about-lead span {
+  font-size: inherit;
+  line-height: inherit;
+  color: var(--accent-2);
+}
+
+/* Τα δύο μικρά κείμενα */
+.about-copy {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(2rem, 5vw, 5rem);
+  width: 100%;
+  max-width: 68rem;
+  margin: 0;
+  color: var(--muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: var(--font-text);
+  line-height: 1.7;
+}
+
+.about-copy p,
+.about-copy p:first-child {
+  margin: 0;
+}
+
+/* Διακριτικός κύκλος δεξιά */
+.about-section::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 12%;
+  right: -22rem;
+  width: 46rem;
+  height: 46rem;
+  border: 1px solid rgba(99, 221, 255, 0.18);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Οι δεξιότητες παραμένουν πάνω από τον κύκλο */
+.about-section .skills {
+  position: relative;
+  z-index: 2;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .about-section::after {
+    right: -30rem;
+    opacity: 0.7;
+  }
+}
+
+/* Κινητό */
+@media (max-width: 700px) {
+  .about-section .section-heading {
+    margin-bottom: 2rem;
+  }
+
+  .about-layout {
+    gap: 2rem;
+  }
+
+  .about-lead {
+    font-size: var(--font-display);
+  }
+
+  .about-copy {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .about-section::after {
+    top: 8%;
+    right: -20rem;
+    width: 32rem;
+    height: 32rem;
+  }
+}
