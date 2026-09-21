@@ -199,3 +199,54 @@ h3,
     text-align: center;
   }
 }
+/* Clean skill presentation without pills */
+.skill-group div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.skill-group span {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.skill-group span:not(:last-child)::after {
+  content: " /";
+  margin-left: 0.55rem;
+  color: var(--accent);
+}
+/* Full-screen section rhythm */
+main > .section,
+main > .contact {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Sections with extensive content may naturally grow */
+#games,
+#media,
+#about,
+#experience {
+  height: auto;
+}
+
+/* Keep headings comfortably separated */
+.section-heading {
+  flex-shrink: 0;
+}
+
+@media (max-width: 700px) {
+  main > .section,
+  main > .contact {
+    min-height: 100svh;
+    justify-content: flex-start;
+  }
+}
