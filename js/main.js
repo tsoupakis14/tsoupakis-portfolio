@@ -28,7 +28,7 @@
     : `<span></span><i aria-hidden="true">${String(index + 1).padStart(2, '0')}</i>`
   }
 </div>
-        <div class="game-info"><p>${escapeHTML(item.type)}</p><h3>${escapeHTML(item.title)}</h3><span>${escapeHTML(item.description)}</span></div><div class="launch">ΠΑΙΞΕ ΤΩΡΑ <i aria-hidden="true">↗</i></div>
+        <div class="game-info"><p>${escapeHTML(item.type)}</p><h3>${escapeHTML(item.title)}</h3><span>${escapeHTML(item.description)}</span></div><div class="launch">ΠΑΙΞΕ ΤΩΡΑ</div>
       </a></article>`).join('');
   }
 
