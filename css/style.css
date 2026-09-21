@@ -102,3 +102,100 @@ h3,
   object-fit: contain;
   padding: 0;
 }
+/* Updated typography */
+body {
+  font-family: "JetBrains Mono", monospace;
+}
+
+h1,
+h2,
+h3,
+.brand,
+.site-nav,
+.button,
+.contact-links strong {
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* Header: keep only the navigation */
+.site-header {
+  justify-content: flex-end;
+}
+
+.brand {
+  display: none;
+}
+
+/* Remove Selected Work */
+#work {
+  display: none;
+}
+
+/* Center section titles and remove side text */
+.section-heading {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-heading .section-number,
+.section-heading > p:last-child {
+  display: none;
+}
+
+.section-heading h2 {
+  margin: 0;
+  text-align: center;
+}
+
+/* Modern rounded buttons */
+.button {
+  border-radius: 999px;
+  padding: 1rem 1.35rem;
+}
+
+.button-primary {
+  box-shadow: 0 8px 30px rgba(113, 136, 255, 0.12);
+}
+
+/* Rounded skill category cards */
+.skills {
+  gap: 1rem;
+  border: 0;
+}
+
+.skill-group {
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+  background: var(--surface);
+  padding: 1.5rem;
+}
+
+/* Rounded skill tags */
+.skill-group span {
+  border-radius: 999px;
+  padding: 0.5rem 0.75rem;
+}
+
+/* Rounded project and media elements */
+.game-visual,
+.work-card,
+.media-card,
+.media-thumb,
+.empty-state,
+.cv-callout {
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+/* Keep mobile navigation button on the right */
+@media (max-width: 700px) {
+  .site-header {
+    justify-content: flex-end;
+  }
+
+  .section-heading {
+    text-align: center;
+  }
+}
