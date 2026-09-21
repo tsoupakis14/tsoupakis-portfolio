@@ -1821,3 +1821,243 @@ footer p,
     height: 32rem;
   }
 }
+/* =========================================
+   ΕΜΠΕΙΡΙΑ ΚΑΙ ΣΠΟΥΔΕΣ
+   ========================================= */
+
+.resume-section {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(4rem, 7vw, 7rem);
+}
+
+/* Μικρός μπλε τίτλος ενότητας */
+.resume-label {
+  width: 100%;
+  margin: 0;
+  color: var(--accent-2);
+  font-family: "JetBrains Mono", monospace;
+  font-size: var(--font-text);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.16em;
+}
+
+/* Λίστα εγγραφών */
+.resume-list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(4rem, 7vw, 7rem);
+  width: 100%;
+}
+
+/* =========================================
+   ΕΜΠΕΙΡΙΑ
+   Μικρά αριστερά — μεγάλα δεξιά
+   ========================================= */
+
+.experience-section {
+  background: var(--surface);
+}
+
+.experience-row {
+  display: grid;
+  grid-template-columns: minmax(13rem, 0.32fr) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(3rem, 8vw, 9rem);
+  width: 100%;
+}
+
+/* Χρονολογία και εταιρεία */
+.experience-meta p {
+  margin: 0 0 0.35rem;
+  color: var(--muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: var(--font-text);
+  line-height: 1.5;
+}
+
+/* Τίτλος εργασίας */
+.experience-content h3 {
+  margin: 0;
+  color: var(--text);
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: var(--font-title);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+/* Ημερομηνίες DigitalPro */
+.experience-dates {
+  margin-top: 2rem;
+}
+
+.experience-dates p {
+  display: grid;
+  grid-template-columns: minmax(12rem, 0.65fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  margin: 0 0 1rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: var(--font-text);
+  line-height: 1.6;
+}
+
+.experience-dates span {
+  color: var(--muted);
+  font-size: inherit;
+}
+
+.experience-dates strong {
+  color: var(--text);
+  font-size: inherit;
+  font-weight: 600;
+}
+
+/* =========================================
+   ΣΠΟΥΔΕΣ
+   Μεγάλα αριστερά — μικρά δεξιά
+   ========================================= */
+
+.education-section {
+  background: var(--bg);
+}
+
+.education-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(14rem, 0.3fr);
+  align-items: start;
+  gap: clamp(3rem, 8vw, 9rem);
+  width: 100%;
+}
+
+/* Τίτλοι σπουδών */
+.education-content h3 {
+  margin: 0;
+  color: var(--text);
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: var(--font-title);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+/* Ίδρυμα και διάρκεια */
+.education-meta {
+  text-align: right;
+}
+
+.education-meta p {
+  margin: 0 0 0.35rem;
+  color: var(--muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: var(--font-text);
+  line-height: 1.5;
+}
+
+/* Κοινή περιγραφή */
+.resume-description {
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: var(--font-text);
+  line-height: 1.6;
+}
+
+/* Γλώσσες */
+.language-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 3rem;
+}
+
+.language-list h3 {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.language-list h3 span {
+  color: var(--muted);
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+  .experience-row {
+    grid-template-columns: minmax(10rem, 0.35fr) minmax(0, 1fr);
+    gap: 3rem;
+  }
+
+  .education-row {
+    grid-template-columns: minmax(0, 1fr) minmax(11rem, 0.35fr);
+    gap: 3rem;
+  }
+
+  .experience-dates p {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+}
+
+/* =========================================
+   ΚΙΝΗΤΟ
+   ========================================= */
+
+@media (max-width: 700px) {
+  .resume-section {
+    min-height: 100svh;
+    justify-content: flex-start;
+    gap: 3.5rem;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+
+  .resume-list {
+    gap: 4rem;
+  }
+
+  .experience-row,
+  .education-row {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  /* Στο κινητό εμφανίζεται πρώτα το ίδρυμα */
+  .education-meta {
+    order: -1;
+    text-align: left;
+  }
+
+  .experience-dates {
+    margin-top: 1.5rem;
+  }
+
+  .experience-dates p {
+    display: block;
+    margin-bottom: 1.2rem;
+  }
+
+  .experience-dates span,
+  .experience-dates strong {
+    display: block;
+  }
+
+  .experience-dates strong {
+    margin-top: 0.25rem;
+  }
+
+  .language-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
