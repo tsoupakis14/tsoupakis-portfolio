@@ -575,3 +575,35 @@ document.querySelectorAll(".skill-item").forEach((item) => {
   item.textContent = "";
   item.appendChild(label);
 });
+(() => {
+  const contact = document.querySelector('.contact');
+
+  if (!contact || contact.dataset.footerMotion) return;
+
+  contact.dataset.footerMotion = 'true';
+
+  const showFooterMotion = () => {
+    contact.classList.add('is-decoration-visible');
+  };
+
+  const reducedMotion = window.matchMedia(
+    '(prefers-reduced-motion: reduce)'
+  ).matches;
+
+  if (reducedMotion || !('IntersectionObserver' in window)) {
+    showFooterMotion();
+    return;
+  }
+
+  const footerObserver = new IntersectionObserver(
+    ([entry]) => {
+      if (!entry.isIntersecting) return;
+
+      showFooterMotion();
+      footerObserver.unobserve(contact);
+    },
+    { threshold: 0.2 }
+  );
+
+  footerObserver.observe(contact);
+})();
