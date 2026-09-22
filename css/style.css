@@ -2181,3 +2181,100 @@ footer p,
     justify-self: start;
   }
 }
+/* =========================================
+   ΣΧΕΤΙΚΑ — ΑΠΑΛΟ ΦΩΤΕΙΝΟ ΠΕΠΛΟ ΔΕΞΙΑ
+   ========================================= */
+
+.about-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+/* Το περιεχόμενο παραμένει πάνω από το φως */
+.about-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Αντικατάσταση του παλιού κύκλου */
+.about-section::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+
+  top: -15%;
+  right: -20vw;
+  bottom: auto;
+  left: auto;
+
+  width: clamp(28rem, 45vw, 52rem);
+  height: 135%;
+
+  border: 0;
+  border-radius: 45%;
+  box-shadow: none;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(99, 221, 255, 0.42) 0%,
+      rgba(80, 155, 255, 0.24) 35%,
+      rgba(113, 136, 255, 0.10) 55%,
+      transparent 75%
+    );
+
+  filter: blur(75px);
+  opacity: 0.18;
+  pointer-events: none;
+  transform: translate3d(0, 0, 0) rotate(-7deg);
+  animation: about-light-breath 16s ease-in-out infinite alternate;
+}
+
+/* Αργή κίνηση πάνω–κάτω */
+@keyframes about-light-breath {
+  0% {
+    opacity: 0.12;
+    transform:
+      translate3d(0, -20px, 0)
+      rotate(-7deg)
+      scale(0.96);
+  }
+
+  100% {
+    opacity: 0.20;
+    transform:
+      translate3d(-15px, 25px, 0)
+      rotate(-4deg)
+      scale(1.04);
+  }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .about-section::after {
+    right: -35vw;
+    width: 65vw;
+    opacity: 0.14;
+  }
+}
+
+/* Κινητό */
+@media (max-width: 700px) {
+  .about-section::after {
+    top: 5%;
+    right: -65vw;
+    width: 95vw;
+    height: 80%;
+    filter: blur(60px);
+    opacity: 0.12;
+  }
+}
+
+/* Προσβασιμότητα */
+@media (prefers-reduced-motion: reduce) {
+  .about-section::after {
+    animation: none;
+    transform: rotate(-7deg);
+  }
+}
