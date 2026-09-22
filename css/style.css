@@ -3079,3 +3079,51 @@ footer,
   width: 100%;
   max-width: none;
 }
+/* Τα / να μένουν ακριβώς δίπλα στο αντίστοιχο skill */
+.skills-column {
+  align-items: flex-start !important;
+}
+
+.skill-item {
+  display: inline-flex !important;
+  align-self: flex-start !important;
+  width: auto !important;
+  justify-content: flex-start !important;
+  gap: 0 !important;
+}
+
+.skill-item:not(:last-child)::after {
+  position: static !important;
+  display: inline !important;
+  margin-left: 0.65rem !important;
+  color: var(--accent-2);
+}
+/* Skills — gradient hover */
+.skill-item {
+  color: transparent;
+  background: linear-gradient(
+    90deg,
+    var(--text) 0%,
+    var(--text) 50%,
+    var(--text) 50%,
+    #2f365f 69%,
+    var(--accent) 85%,
+    var(--accent-2) 100%
+  );
+  background-size: 200% 100%;
+  background-position: 0% 0%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-position 0.55s var(--ease);
+}
+
+.skill-item:hover {
+  background-position: 100% 0%;
+}
+
+/* Το / παραμένει πάντα γαλάζιο */
+.skill-item:not(:last-child)::after {
+  color: var(--accent-2) !important;
+  -webkit-text-fill-color: var(--accent-2);
+}
