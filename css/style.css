@@ -2750,10 +2750,12 @@ footer,
 .game-card > a:hover .game-info h3 {
   color: transparent;
   background: linear-gradient(
-    90deg,
-    var(--accent) 15%,
-    var(--accent-2)
-  );
+  90deg,
+  var(--text) 0%,
+  #2f365f 38%,
+  var(--accent) 70%,
+  var(--accent-2) 100%
+);
   background-clip: text;
   -webkit-background-clip: text;
 }
