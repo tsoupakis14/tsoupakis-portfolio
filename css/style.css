@@ -761,7 +761,7 @@ main > .contact {
 }
 
 .skill-group span:not(:last-child)::after {
-  content: " /";
+  content: "/";
   margin-left: 0.55rem;
   color: var(--accent);
 }
