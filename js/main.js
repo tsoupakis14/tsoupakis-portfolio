@@ -316,7 +316,6 @@
   renderSelectedWork();
   renderGames();
   renderMedia();
-  renderSkills();
 
   const currentYear = $('#current-year');
 
