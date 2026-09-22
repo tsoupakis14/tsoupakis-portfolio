@@ -2710,3 +2710,71 @@ footer,
   margin-right: calc(clamp(2rem, 10vw, 12rem) * -1);
   margin-left: calc(clamp(2rem, 10vw, 12rem) * -1);
 }
+/* GAMES — μοντέρνο, διακριτικό hover */
+.game-card > a {
+  border-radius: var(--radius);
+  transition: background 0.3s var(--ease);
+}
+
+.game-card > a:hover {
+  padding-right: 0;
+  padding-left: 0;
+  background: transparent;
+}
+
+/* Μικρό zoom και απαλό μπλε glow στην εικόνα */
+.game-visual {
+  transition:
+    border-color 0.35s var(--ease),
+    box-shadow 0.35s var(--ease);
+}
+
+.game-visual img {
+  transition: transform 0.45s var(--ease);
+}
+
+.game-card > a:hover .game-visual {
+  border-color: rgba(24, 191, 233, 0.55);
+  box-shadow: 0 1rem 2.5rem rgba(24, 191, 233, 0.16);
+}
+
+.game-card > a:hover .game-visual img {
+  transform: scale(1.02);
+}
+
+/* Ο τίτλος αποκτά χρώμα */
+.game-info h3 {
+  transition: color 0.3s var(--ease);
+}
+
+.game-card > a:hover .game-info h3 {
+  color: var(--accent-2);
+}
+
+/* Το «ΠΑΙΞΕ ΤΩΡΑ» αποκτά λεπτή γραμμή */
+.launch {
+  position: relative;
+  color: var(--text);
+  transition: color 0.3s var(--ease);
+}
+
+.launch::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -0.4rem;
+  left: 0;
+  height: 1px;
+  background: var(--accent-2);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s var(--ease);
+}
+
+.game-card > a:hover .launch {
+  color: var(--accent-2);
+}
+
+.game-card > a:hover .launch::after {
+  transform: scaleX(1);
+}
