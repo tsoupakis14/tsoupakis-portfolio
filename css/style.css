@@ -2100,3 +2100,84 @@ footer p,
   transform-origin: 50% 50% !important;
   will-change: transform;
 }
+/* =========================================
+   ΚΕΝΤΡΑΡΙΣΜΕΝΕΣ ΣΕΙΡΕΣ ΠΑΙΧΝΙΔΙΩΝ
+   ========================================= */
+
+/* Ο αριθμός δεν χρειάζεται πλέον */
+.game-number {
+  display: none;
+}
+
+/* Κεντράρισμα ολόκληρης της σειράς */
+.game-card > a {
+  display: grid;
+  grid-template-columns:
+    minmax(280px, 370px)
+    minmax(320px, 1fr)
+    minmax(120px, auto);
+  align-items: center;
+  gap: clamp(2rem, 4vw, 4rem);
+
+  width: min(100%, 1200px);
+  margin-inline: auto;
+  padding: 2rem 0;
+}
+
+/* Εικόνα */
+.game-visual {
+  width: 100%;
+  justify-self: center;
+}
+
+/* Πληροφορίες */
+.game-info {
+  align-self: center;
+}
+
+/* Κουμπί ΠΑΙΞΕ ΤΩΡΑ */
+.launch {
+  align-self: center;
+  justify-self: center;
+  white-space: nowrap;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .game-card > a {
+    grid-template-columns:
+      minmax(240px, 320px)
+      minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  .launch {
+    grid-column: 2;
+    justify-self: start;
+  }
+}
+
+/* Κινητό */
+@media (max-width: 700px) {
+  .game-card > a {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 2rem 0;
+  }
+
+  .game-visual,
+  .game-info,
+  .launch {
+    grid-column: 1;
+  }
+
+  .game-info {
+    text-align: left;
+  }
+
+  .launch {
+    justify-self: start;
+  }
+}
