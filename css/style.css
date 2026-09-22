@@ -2652,3 +2652,8 @@ footer,
     padding: 1rem;
   }
 }
+/* ΣΧΕΤΙΚΑ — σταθερά κενά δεξιά και αριστερά */
+.about-section {
+  padding-right: max(1.5rem, calc((100vw - 1500px) / 2));
+  padding-left: max(1.5rem, calc((100vw - 1500px) / 2));
+}
