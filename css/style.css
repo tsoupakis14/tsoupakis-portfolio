@@ -3276,7 +3276,8 @@ footer,
 .contact-line {
   position: absolute;
   right: 0;
-  bottom: clamp(6rem, 10vw, 9rem);
+  top: 0;
+  bottom: auto;
   left: 0;
   height: 2px;
   transform: scaleX(0);
