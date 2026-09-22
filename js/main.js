@@ -542,3 +542,26 @@
     startOrbitAnimation();
   }
 })();
+/* Profile card — εμφάνιση φωτογραφίας */
+(() => {
+  const profileCard = document.querySelector(".profile-code");
+
+  if (!profileCard) return;
+
+  profileCard.addEventListener("click", () => {
+    const showingPhoto = profileCard.classList.toggle("is-photo");
+
+    profileCard.setAttribute("aria-pressed", String(showingPhoto));
+
+    profileCard.setAttribute(
+      "aria-label",
+      showingPhoto
+        ? "Πάτησε για να επιστρέψεις στον κώδικα"
+        : "Πάτησε για να εμφανίσεις τη φωτογραφία του Τάσου"
+    );
+
+    profileCard.querySelector(".profile-hint").textContent = showingPhoto
+      ? "πάτησε για κώδικα"
+      : "πάτησε για φωτογραφία";
+  });
+})();
