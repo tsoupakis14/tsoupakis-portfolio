@@ -3440,3 +3440,22 @@ footer,
   margin: 0 !important;
   text-align: center !important;
 }
+/* Footer — πιο συμπαγής διάταξη αριστερά */
+.contact .contact-main {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  gap: clamp(2.5rem, 4vw, 4rem) !important;
+  min-height: auto !important;
+  transform: translateY(-4rem);
+}
+
+.contact .contact-main h2 {
+  margin: 0 !important;
+}
+
+.contact .contact-links {
+  width: auto !important;
+  margin: 0 !important;
+}
