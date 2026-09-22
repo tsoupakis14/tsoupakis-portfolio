@@ -564,3 +564,14 @@
       : "πάτησε για φωτογραφία";
   });
 })();
+/* Skills — τυλίγει κάθε κείμενο για σωστό gradient hover */
+document.querySelectorAll(".skill-item").forEach((item) => {
+  if (item.querySelector(".skill-label")) return;
+
+  const label = document.createElement("span");
+  label.className = "skill-label";
+  label.textContent = item.textContent.trim();
+
+  item.textContent = "";
+  item.appendChild(label);
+});
