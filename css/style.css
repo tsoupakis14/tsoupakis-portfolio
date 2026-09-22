@@ -2094,3 +2094,9 @@ footer p,
   transform-origin: center center;
   will-change: transform;
 }
+.hero-orbit {
+  animation: none !important;
+  transition: none !important;
+  transform-origin: 50% 50% !important;
+  will-change: transform;
+}
