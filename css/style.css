@@ -2941,3 +2941,17 @@ footer,
 .skill-group:hover > p {
   background-position: 100% 0%;
 }
+/* Skills — full width μέσα στο κοινό 10vw padding */
+.about-section #skills {
+  display: grid;
+  width: 100% !important;
+  max-width: none !important;
+  margin: clamp(4rem, 8vw, 7rem) 0 0 !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 1.25rem;
+}
+
+.about-section #skills .skill-group {
+  min-height: 18rem;
+  padding: clamp(1.5rem, 2.5vw, 2.25rem) !important;
+}
