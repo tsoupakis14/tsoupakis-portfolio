@@ -90,4 +90,45 @@
   sections.forEach(section => activeObserver.observe(section));
 
   if (!reducedMotion && window.matchMedia('(pointer: fine)').matches) { const glow = $('.cursor-glow'); window.addEventListener('pointermove', event => { glow.style.transform = `translate3d(${event.clientX}px, ${event.clientY}px, 0)`; glow.classList.add('visible'); }, { passive: true }); }
+  /* Scroll animation για τον κύκλο της αρχικής */
+  const heroOrbit = $('.hero-orbit');
+
+  if (heroOrbit && !reducedMotion) {
+    let orbitTicking = false;
+
+    const updateHeroOrbit = () => {
+      const scrollPosition = window.scrollY;
+
+      /* Περιστροφή της κουκκίδας πάνω στον κύκλο */
+      const orbitAngle = scrollPosition * 0.08;
+
+      /* Μικρή κάθετη parallax μετακίνηση */
+      const orbitY = Math.min(scrollPosition * 0.035, 40);
+
+      heroOrbit.style.setProperty(
+        '--orbit-angle',
+        `${orbitAngle}deg`
+      );
+
+      heroOrbit.style.setProperty(
+        '--orbit-y',
+        `${orbitY}px`
+      );
+
+      orbitTicking = false;
+    };
+
+    window.addEventListener(
+      'scroll',
+      () => {
+        if (!orbitTicking) {
+          window.requestAnimationFrame(updateHeroOrbit);
+          orbitTicking = true;
+        }
+      },
+      { passive: true }
+    );
+
+    updateHeroOrbit();
+  }
 })();
