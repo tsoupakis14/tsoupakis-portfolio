@@ -2747,21 +2747,6 @@ footer,
   transition: color 0.3s var(--ease);
 }
 
-.game-card > a:hover .game-info h3 {
-  display: inline-block;
-  width: fit-content;
-  color: transparent;
-  background: linear-gradient(
-  90deg,
-  var(--text) 0%,
-  #2f365f 38%,
-  var(--accent) 70%,
-  var(--accent-2) 100%
-);
-  background-clip: text;
-  -webkit-background-clip: text;
-}
-
 /* Το «ΠΑΙΞΕ ΤΩΡΑ» αποκτά λεπτή γραμμή */
 .launch {
   position: relative;
@@ -2788,4 +2773,28 @@ footer,
 
 .game-card > a:hover .launch::after {
   transform: scaleX(1);
+}
+/* Τίτλος παιχνιδιού — ομαλό gradient στο hover */
+.game-info h3 {
+  display: inline-block;
+  width: fit-content;
+  color: transparent;
+  background: linear-gradient(
+    90deg,
+    var(--text) 0%,
+    var(--text) 50%,
+    var(--text) 50%,
+    #2f365f 69%,
+    var(--accent) 85%,
+    var(--accent-2) 100%
+  );
+  background-size: 200% 100%;
+  background-position: 0% 0%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: background-position 0.55s var(--ease);
+}
+
+.game-card > a:hover .game-info h3 {
+  background-position: 100% 0%;
 }
