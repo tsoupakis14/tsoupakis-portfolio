@@ -2894,3 +2894,14 @@ footer,
 .skill-group span {
   font-size: clamp(0.95rem, 1.1vw, 1.1rem) !important;
 }
+/* Skills — 2 κάρτες σε κάθε σειρά */
+#skills {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+/* Στο κινητό μία κάρτα σε κάθε σειρά */
+@media (max-width: 700px) {
+  #skills {
+    grid-template-columns: 1fr !important;
+  }
+}
