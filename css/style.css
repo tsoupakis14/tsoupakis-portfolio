@@ -2748,6 +2748,8 @@ footer,
 }
 
 .game-card > a:hover .game-info h3 {
+  display: inline-block;
+  width: fit-content;
   color: transparent;
   background: linear-gradient(
   90deg,
