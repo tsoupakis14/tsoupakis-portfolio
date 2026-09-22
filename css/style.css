@@ -3423,3 +3423,20 @@ footer,
   margin: 0 auto !important;
   text-align: center !important;
 }
+/* Copyright στο απόλυτο κέντρο της οθόνης */
+.contact footer {
+  position: absolute !important;
+  bottom: 2rem !important;
+  left: 50% !important;
+  width: 100vw !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: translateX(-50%) !important;
+  text-align: center !important;
+}
+
+.contact footer p {
+  width: 100% !important;
+  margin: 0 !important;
+  text-align: center !important;
+}
