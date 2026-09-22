@@ -3695,3 +3695,34 @@ footer,
     transform: translateY(-.28rem) rotate(-45deg);
   }
 }
+.button-primary {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition: color .35s var(--ease), transform .25s var(--ease);
+}
+
+.button-primary::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    #151822 0%,
+    #2f365f 38%,
+    var(--accent) 70%,
+    var(--accent-2) 100%
+  );
+  transform: translateX(-101%);
+  transition: transform .45s var(--ease);
+}
+
+.button-primary:hover {
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.button-primary:hover::before {
+  transform: translateX(0);
+}
