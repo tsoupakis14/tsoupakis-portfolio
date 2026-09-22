@@ -3597,3 +3597,101 @@ footer,
     display: none !important;
   }
 }
+/* Mobile — full-screen λευκό menu */
+@media (max-width: 760px) {
+
+  .site-header,
+  .site-header.is-scrolled {
+    z-index: 10001 !important;
+    background: transparent !important;
+    border-color: transparent !important;
+    backdrop-filter: none !important;
+  }
+
+  .menu-toggle {
+    position: relative !important;
+    z-index: 10002 !important;
+    display: block !important;
+  }
+
+  .site-nav {
+    position: fixed !important;
+    z-index: 10000 !important;
+    inset: 0 !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 2rem !important;
+
+    width: 100vw !important;
+    height: 100svh !important;
+    min-height: 100svh !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 6rem 2rem 2rem !important;
+    overflow: hidden !important;
+
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: #f7f8fb !important;
+    box-shadow: none !important;
+
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transform: translateY(-1rem) !important;
+    transition:
+      opacity .28s ease,
+      transform .35s var(--ease),
+      visibility .35s !important;
+  }
+
+  .site-nav.is-open {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transform: translateY(0) !important;
+  }
+
+  .site-nav > a {
+    position: static !important;
+    display: block !important;
+    width: auto !important;
+    margin: 0 !important;
+    padding: .35rem 0 !important;
+
+    color: var(--text) !important;
+    background: none !important;
+    font-family: "Inter", system-ui, sans-serif !important;
+    font-size: clamp(2.5rem, 11vw, 4.5rem) !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    letter-spacing: -.06em !important;
+    text-align: center !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+  }
+
+  .site-nav > a:hover,
+  .site-nav > a.active {
+    color: var(--accent) !important;
+  }
+
+  .site-nav > a::after,
+  .site-nav .nav-indicator {
+    display: none !important;
+  }
+
+  /* Το hamburger γίνεται Χ όταν το menu είναι ανοιχτό */
+  .menu-toggle[aria-expanded="true"] span:not(.sr-only):first-of-type {
+    transform: translateY(.28rem) rotate(45deg);
+  }
+
+  .menu-toggle[aria-expanded="true"] span:not(.sr-only):last-of-type {
+    transform: translateY(-.28rem) rotate(-45deg);
+  }
+}
