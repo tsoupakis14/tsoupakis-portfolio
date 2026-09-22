@@ -2072,3 +2072,19 @@ footer p,
   line-height: 1;
   letter-spacing: -0.055em;
 }
+/* Scroll animation για τον κύκλο και την κουκκίδα */
+.hero-orbit {
+  animation: none;
+  transform:
+    translate3d(0, var(--orbit-y, 0px), 0)
+    rotate(var(--orbit-angle, 0deg));
+  transform-origin: center;
+  will-change: transform;
+}
+
+/* Χωρίς κίνηση για χρήστες που την έχουν απενεργοποιήσει */
+@media (prefers-reduced-motion: reduce) {
+  .hero-orbit {
+    transform: none;
+  }
+}
