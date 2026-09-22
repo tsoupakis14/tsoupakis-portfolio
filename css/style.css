@@ -3459,3 +3459,75 @@ footer,
   width: auto !important;
   margin: 0 !important;
 }
+/* Κινητό */
+@media (max-width: 760px) {
+
+  /* Αφαίρεση όλων των / από Εργαλεία & Δεξιότητες */
+  .skills-column .skill-item::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  /* Το header μένει σταθερό και ίδιο σε κάθε σημείο του scroll */
+  .site-header,
+  .site-header.is-scrolled {
+    position: fixed !important;
+    height: 5.25rem !important;
+    background: rgba(247, 248, 251, .88) !important;
+    border-bottom: 1px solid var(--border) !important;
+    backdrop-filter: blur(18px);
+  }
+
+  .menu-toggle {
+    position: relative !important;
+    z-index: 102 !important;
+    display: block !important;
+  }
+
+  /* Το μενού ανοίγει πάντα σαν popup */
+  .site-nav {
+    position: fixed !important;
+    z-index: 101 !important;
+    top: 5.9rem !important;
+    right: 1rem !important;
+    left: 1rem !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 1.25rem !important;
+
+    padding: 1.5rem !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 1.25rem !important;
+    background: rgba(255, 255, 255, .96) !important;
+    box-shadow: 0 1.25rem 3rem rgba(24, 37, 70, .13) !important;
+    backdrop-filter: blur(18px);
+
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transform: translateY(-.75rem) scale(.98) !important;
+    transition:
+      opacity .25s ease,
+      transform .25s var(--ease),
+      visibility .25s !important;
+  }
+
+  .site-nav.is-open {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transform: translateY(0) scale(1) !important;
+  }
+
+  .site-nav a {
+    width: 100% !important;
+    padding: .35rem 0 !important;
+    text-align: center !important;
+  }
+
+  .site-nav .nav-indicator {
+    display: none !important;
+  }
+}
