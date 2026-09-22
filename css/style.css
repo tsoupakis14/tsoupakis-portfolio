@@ -2696,3 +2696,17 @@ footer,
   margin-right: 0 !important;
   margin-left: 0 !important;
 }
+/* Κοινά πλαϊνά κενά σε όλο το site */
+.site-header,
+.hero,
+.section,
+.contact {
+  padding-right: clamp(2rem, 10vw, 12rem) !important;
+  padding-left: clamp(2rem, 10vw, 12rem) !important;
+}
+
+/* Το footer να μη μετακινηθεί */
+.contact footer {
+  margin-right: calc(clamp(2rem, 10vw, 12rem) * -1);
+  margin-left: calc(clamp(2rem, 10vw, 12rem) * -1);
+}
