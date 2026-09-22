@@ -578,12 +578,15 @@ document.querySelectorAll(".skill-item").forEach((item) => {
 (() => {
   const contact = document.querySelector('.contact');
 
-  if (!contact || contact.dataset.footerMotion) return;
-
-  contact.dataset.footerMotion = 'true';
+  if (!contact) return;
 
   const showFooterMotion = () => {
-    contact.classList.add('is-decoration-visible');
+    /* Δίνει χρόνο στον browser να δείξει πρώτα τα τετράγωνα μαζεμένα */
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        contact.classList.add('is-decoration-visible');
+      });
+    });
   };
 
   const reducedMotion = window.matchMedia(
@@ -602,7 +605,7 @@ document.querySelectorAll(".skill-item").forEach((item) => {
       showFooterMotion();
       footerObserver.unobserve(contact);
     },
-    { threshold: 0.2 }
+    { threshold: 0.15 }
   );
 
   footerObserver.observe(contact);
