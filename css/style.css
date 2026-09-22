@@ -2657,6 +2657,7 @@ footer,
   padding-right: max(1.5rem, calc((100vw - 1500px) / 2));
   padding-left: max(1.5rem, calc((100vw - 1500px) / 2));
 }
+
 /* ΣΧΕΤΙΚΑ — περιορισμένο πλάτος και ίσα πλαϊνά κενά */
 .about-section .section-heading,
 .about-section .about-layout,
@@ -2668,4 +2669,30 @@ footer,
 
 .about-section .section-heading {
   margin-bottom: clamp(2.5rem, 5vw, 4.5rem) !important;
+}
+/* ΣΧΕΤΙΚΑ — άνετα πλαϊνά κενά */
+.about-section {
+  padding-right: clamp(2rem, 10vw, 12rem) !important;
+  padding-left: clamp(2rem, 10vw, 12rem) !important;
+}
+
+.about-section .section-heading,
+.about-section .about-layout,
+.about-section .skills {
+  width: 100% !important;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+/* ΣΧΕΤΙΚΑ — άνετα πλαϊνά κενά */
+.about-section {
+  padding-right: clamp(2rem, 10vw, 12rem) !important;
+  padding-left: clamp(2rem, 10vw, 12rem) !important;
+}
+
+.about-section .section-heading,
+.about-section .about-layout,
+.about-section .skills {
+  width: 100% !important;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
 }
