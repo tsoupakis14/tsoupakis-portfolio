@@ -2873,18 +2873,7 @@ footer,
 .profile-hint {
   display: none;
 }
-/* Skills — δύο στήλες όταν δεν υπάρχει αρκετός χώρος */
-@media (max-width: 1500px) {
-  .skills {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
 
-@media (max-width: 700px) {
-  .skills {
-    grid-template-columns: 1fr;
-  }
-}
 /* FIX — μεγαλύτερες κάρτες δεξιοτήτων */
 #skills {
   grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
