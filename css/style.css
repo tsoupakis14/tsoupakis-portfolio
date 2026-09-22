@@ -2873,8 +2873,24 @@ footer,
 .profile-hint {
   display: none;
 }
-
-/* FIX — μεγαλύτερες κάρτες δεξιοτήτων */
+/* Skills — πάντα 4 κάρτες */
 #skills {
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+}
+
+.skill-group {
+  padding: 1.25rem !important;
+}
+/* Skills — 4 κάρτες με άνετο κείμενο */
+#skills {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+}
+
+.skill-group {
+  padding: 1.1rem !important;
+}
+
+.skill-group > p,
+.skill-group span {
+  font-size: clamp(0.95rem, 1.1vw, 1.1rem) !important;
 }
