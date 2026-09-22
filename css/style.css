@@ -3127,3 +3127,12 @@ footer,
   color: var(--accent-2) !important;
   -webkit-text-fill-color: var(--accent-2);
 }
+/* Τα / σε σταθερή θέση στο τέλος κάθε στήλης */
+.skills-column .skill-item {
+  width: 100% !important;
+  justify-content: space-between !important;
+}
+
+.skills-column .skill-item:not(:last-child)::after {
+  margin-left: auto !important;
+}
