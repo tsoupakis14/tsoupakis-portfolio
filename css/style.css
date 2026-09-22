@@ -2748,7 +2748,14 @@ footer,
 }
 
 .game-card > a:hover .game-info h3 {
-  color: var(--accent-2);
+  color: transparent;
+  background: linear-gradient(
+    90deg,
+    var(--accent) 15%,
+    var(--accent-2)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 /* Το «ΠΑΙΞΕ ΤΩΡΑ» αποκτά λεπτή γραμμή */
