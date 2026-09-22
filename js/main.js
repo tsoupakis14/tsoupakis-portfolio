@@ -508,8 +508,14 @@
     );
 
     const updateOrbit = () => {
-      const angle = window.scrollY * 0.35;
-      const moveY = Math.min(window.scrollY * 0.03, 35);
+      /* Αρχική θέση της κουκκίδας πιο πίσω */
+      const startAngle = -35;
+
+      /* Πιο αργή περιστροφή */
+      const angle = startAngle + window.scrollY * 0.08;
+
+      /* Πιο διακριτική κάθετη κίνηση */
+      const moveY = Math.min(window.scrollY * 0.015, 20);
 
       orbit.style.setProperty(
         'transform',
