@@ -3053,3 +3053,29 @@ footer,
     padding: 1.5rem;
   }
 }
+/* Εργαλεία & Δεξιότητες — τίτλος επάνω, ενιαίο κουτί κάτω */
+#about .skills-catalog {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  width: 80vw !important;
+  max-width: none !important;
+  margin: clamp(4rem, 8vw, 7rem) 0 0 !important;
+}
+
+#about .skills-catalog > h3 {
+  width: 100%;
+  margin: 0 0 clamp(2rem, 4vw, 3.5rem);
+  color: var(--text);
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: var(--font-display);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.055em;
+  text-align: center;
+}
+
+#about .skills-catalog .skills-panel {
+  width: 100%;
+  max-width: none;
+}
