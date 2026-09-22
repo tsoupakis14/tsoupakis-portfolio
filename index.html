@@ -93,12 +93,18 @@
       </div>
     </div>
 
-    <div class="profile-code reveal" aria-label="Προσωπικό προφίλ">
-      <div class="profile-code-bar" aria-hidden="true">
-        <span></span><span></span><span></span>
-      </div>
+    <button
+  class="profile-code reveal"
+  type="button"
+  aria-pressed="false"
+  aria-label="Πάτησε για να εμφανίσεις τη φωτογραφία του Τάσου"
+>
+  <div class="profile-code-content">
+    <div class="profile-code-bar" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </div>
 
-      <pre><code><span class="code-key">const</span> profile = {
+    <pre><code><span class="code-key">const</span> profile = {
   <span class="code-property">name</span>: <span class="code-string">"Τάσος Τσουπάκης"</span>,
   <span class="code-property">role</span>: <span class="code-string">"Web Designer"</span>,
   <span class="code-property">focus</span>: [
@@ -106,10 +112,18 @@
     <span class="code-string">"Frontend"</span>,
     <span class="code-string">"Marketing"</span>
   ],
-  <span class="code-property">status</span>: <span class="code-string">"Creating"</span>
+  <span class="code-property">photo</span>: <span class="code-string">"click to reveal"</span>
 };</code></pre>
-    </div>
   </div>
+
+  <img
+    class="profile-image"
+    src="assets/images/tasos-profile.png"
+    alt="Ο Τάσος Τσουπάκης"
+  >
+
+  <span class="profile-hint">πάτησε για φωτογραφία</span>
+</button>
 
   <div class="skills" id="skills"></div>
 </section>
