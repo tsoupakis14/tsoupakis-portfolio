@@ -482,57 +482,57 @@
     }
   }
 
-  /* =========================================
-     HERO ORBIT SCROLL ANIMATION
-     ========================================= */
+})();
 
-  const heroOrbit = $('.hero-orbit');
+/* HERO ORBIT — SCROLL TEST */
+(() => {
+  const startOrbitAnimation = () => {
+    const orbit = document.querySelector('.hero-orbit');
 
-  if (heroOrbit && !reducedMotion) {
-    let orbitFrame = null;
+    if (!orbit) {
+      console.log('Hero orbit not found');
+      return;
+    }
 
-    /* Σταματά το παλιό αυτόματο animation */
-    heroOrbit.style.animation = 'none';
+    /* Απενεργοποίηση της παλιάς αυτόματης κίνησης */
+    orbit.style.setProperty(
+      'animation',
+      'none',
+      'important'
+    );
 
-    const updateHeroOrbit = () => {
-      const scrollPosition = window.scrollY;
+    orbit.style.setProperty(
+      'transition',
+      'none',
+      'important'
+    );
 
-      /*
-       * 0.18 = ταχύτητα περιστροφής.
-       * Μικρότερη τιμή σημαίνει πιο αργή κίνηση.
-       */
-      const rotation = scrollPosition * 0.18;
+    const updateOrbit = () => {
+      const angle = window.scrollY * 0.35;
+      const moveY = Math.min(window.scrollY * 0.03, 35);
 
-      /*
-       * Μικρό parallax με μέγιστη μετακίνηση 35px.
-       */
-      const movement = Math.min(
-        scrollPosition * 0.03,
-        35
+      orbit.style.setProperty(
+        'transform',
+        `translate3d(0, ${moveY}px, 0) rotate(${angle}deg)`,
+        'important'
       );
-
-      heroOrbit.style.transform =
-        `translate3d(0, ${movement}px, 0)
-         rotate(${rotation}deg)`;
-
-      orbitFrame = null;
-    };
-
-    const requestOrbitUpdate = () => {
-      if (orbitFrame !== null) return;
-
-      orbitFrame =
-        window.requestAnimationFrame(
-          updateHeroOrbit
-        );
     };
 
     window.addEventListener(
       'scroll',
-      requestOrbitUpdate,
+      updateOrbit,
       { passive: true }
     );
 
-    updateHeroOrbit();
+    updateOrbit();
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener(
+      'DOMContentLoaded',
+      startOrbitAnimation
+    );
+  } else {
+    startOrbitAnimation();
   }
 })();
