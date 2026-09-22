@@ -2225,7 +2225,7 @@ footer p,
     );
 
   filter: blur(75px);
-  opacity: 0.18;
+  opacity: 0.25;
   pointer-events: none;
   transform: translate3d(0, 0, 0) rotate(-7deg);
   animation: about-light-breath 16s ease-in-out infinite alternate;
@@ -2242,7 +2242,7 @@ footer p,
   }
 
   100% {
-    opacity: 0.20;
+    opacity: 0.30;
     transform:
       translate3d(-15px, 25px, 0)
       rotate(-4deg)
