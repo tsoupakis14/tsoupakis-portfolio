@@ -2088,3 +2088,9 @@ footer p,
     transform: none;
   }
 }
+/* Επιτρέπει στο JavaScript να κινεί τον κύκλο */
+.hero-orbit {
+  animation: none !important;
+  transform-origin: center center;
+  will-change: transform;
+}
