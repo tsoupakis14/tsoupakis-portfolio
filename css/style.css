@@ -2905,3 +2905,39 @@ footer,
     grid-template-columns: 1fr !important;
   }
 }
+/* Skills cards — διακριτικό hover */
+.skill-group {
+  transition:
+    border-color 0.35s var(--ease),
+    box-shadow 0.35s var(--ease);
+}
+
+.skill-group:hover {
+  border-color: rgba(24, 191, 233, 0.5);
+  box-shadow: 0 1.1rem 2.8rem rgba(84, 132, 255, 0.13);
+}
+
+/* Τίτλος κάρτας: μαύρο → μωβ → γαλάζιο */
+.skill-group > p {
+  display: inline-block;
+  width: fit-content;
+  color: transparent;
+  background: linear-gradient(
+    90deg,
+    var(--text) 0%,
+    var(--text) 50%,
+    var(--text) 50%,
+    #2f365f 69%,
+    var(--accent) 85%,
+    var(--accent-2) 100%
+  );
+  background-size: 200% 100%;
+  background-position: 0% 0%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: background-position 0.55s var(--ease);
+}
+
+.skill-group:hover > p {
+  background-position: 100% 0%;
+}
