@@ -2869,3 +2869,7 @@ footer,
 .profile-code.is-photo .profile-hint {
   content: "πάτησε για κώδικα";
 }
+/* Απόκρυψη μηνύματος στην κάρτα προφίλ */
+.profile-hint {
+  display: none;
+}
