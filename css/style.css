@@ -808,3 +808,14 @@ h1, h2, h3, p { margin-top: 0; }
 .square-three {
   transform: translate(-104%, 44%) rotate(-14deg);
 }
+/* Η οδηγία για τη φωτογραφία ως μέρος του κώδικα */
+.code-action {
+  color: #63ddff;
+  text-decoration: underline;
+  text-decoration-color: rgba(99, 221, 255, .45);
+  text-underline-offset: .3em;
+}
+
+.profile-code:hover .code-action {
+  color: #fff;
+}
