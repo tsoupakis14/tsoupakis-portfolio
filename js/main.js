@@ -182,15 +182,3 @@
   window.addEventListener('scroll', updateOrbit, { passive: true });
   updateOrbit();
 })();
-
-/* Αλλαγή μηνύματος στην κάρτα προφίλ */
-(() => {
-  const profileCard = document.querySelector('.profile-code');
-  const profileHint = document.querySelector('.profile-hint');
-
-  if (!profileCard || !profileHint) return;
-
-  profileCard.addEventListener('click', () => {
-    profileHint.textContent = profileCard.classList.contains('is-photo')
-  });
-})();
