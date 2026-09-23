@@ -1,198 +1,131 @@
 <!doctype html>
-<html lang="en">
+<html lang="el">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Anastasis Tsoupakis — Web Designer &amp; Creative Developer</title>
   <meta name="description" content="Portfolio of Anastasis Tsoupakis, Web Designer, Creative Developer and Digital Creator focused on modern websites, interactive experiences and digital content.">
-  <meta name="theme-color" content="#07080b">
+  <meta name="theme-color" content="#f7f8fb">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Anastasis Tsoupakis — Web Designer &amp; Creative Developer">
   <meta property="og:description" content="Modern websites, interactive experiences and digital content by Anastasis Tsoupakis.">
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="data/projects.js" defer></script>
-  <script src="js/main.js?v=3" defer></script>
+  <script src="js/main.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">Μετάβαση στο περιεχόμενο</a>
   <div class="cursor-glow" aria-hidden="true"></div>
 
   <header class="site-header" data-header>
-    <a class="brand" href="#top" aria-label="Anastasis Tsoupakis — home">
-      <span class="brand-mark" aria-hidden="true">AT</span>
-      <span class="brand-name">Anastasis Tsoupakis</span>
-    </a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-      <span class="sr-only">Toggle navigation</span><span></span><span></span>
+      <span class="sr-only">Άνοιγμα μενού</span><span></span><span></span>
     </button>
-    <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
-      <a href="#games">Έργα</a><a href="#about">Σχετικά</a><a href="#contact">Επικοινωνία</a>
-      <span class="nav-indicator" aria-hidden="true"></span>
+    <nav class="site-nav" id="site-nav" aria-label="Κύρια πλοήγηση">
+      <a href="#games">Έργα</a>
+      <a href="#about">Σχετικά</a>
+      <a href="#contact">Επικοινωνία</a>
     </nav>
   </header>
 
   <main id="main">
     <section class="hero" id="top" aria-labelledby="hero-title">
-      <div class="hero-grid" aria-hidden="true"></div><div class="hero-orbit" aria-hidden="true"></div>
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-orbit" aria-hidden="true"></div>
       <div class="hero-content reveal">
-        <h1 id="hero-title">
-          <span>Από ιδέες σε ψηφιακές</span>
-          <span class="gradient-text">εμπειρίες με χαρακτήρα.</span>
-        </h1>
-
-        <p class="hero-copy">
-          Σχεδιάζω σύγχρονες ιστοσελίδες, διαδραστικές εμπειρίες,
-          ψηφιακό περιεχόμενο και δημιουργικά web projects.
-        </p>
-        <div class="hero-actions"><a class="button button-primary" href="#games">Έργα </a></div>
+        <h1 id="hero-title"><span>Από ιδέες σε ψηφιακές</span><span class="gradient-text">εμπειρίες με χαρακτήρα.</span></h1>
+        <p class="hero-copy">Σχεδιάζω σύγχρονες ιστοσελίδες, διαδραστικές εμπειρίες, ψηφιακό περιεχόμενο και δημιουργικά web projects.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#games">Έργα</a></div>
       </div>
     </section>
 
-    <section class="section" id="work" aria-labelledby="work-title">
-      <div class="section-heading reveal"><p class="section-number">01 / Selected</p><h2 id="work-title">Selected Work</h2><p>A focused selection of web and digital projects.</p></div>
-      <div class="project-grid" id="selected-work-grid" aria-live="polite"></div>
-    </section>
-
     <section class="section section-contrast" id="games" aria-labelledby="games-title">
-      <div class="section-heading reveal"><p class="section-number">02 / Interactive</p><h2 id="games-title">Experiments</h2><p>Playful browser projects built around interaction, curiosity and code.</p></div>
-      <div class="games-list" id="games-grid"></div>
+      <div class="section-heading reveal"><h2 id="games-title">Experiments</h2></div>
+      <div class="games-list" id="games-grid" aria-live="polite"></div>
     </section>
 
     <section class="section" id="media" aria-labelledby="media-title">
-      <div class="section-heading reveal"><p class="section-number">03 / Content</p><h2 id="media-title">Content</h2><p>Videos, publications, graphics and other creative output.</p></div>
+      <div class="section-heading reveal"><h2 id="media-title">Content</h2></div>
       <div class="media-grid" id="media-grid" aria-live="polite"></div>
     </section>
 
     <section class="section about-section" id="about" aria-labelledby="about-title">
-  <div class="section-heading reveal">
-  </div>
+      <div class="about-layout">
+        <div class="about-intro reveal">
+          <h2 class="about-lead" id="about-title">ΣΚΕΦΤΟΜΑΙ. ΣΧΕΔΙΑΖΩ.<br><span>ΔΗΜΙΟΥΡΓΩ.</span></h2>
+          <div class="about-copy">
+            <p>Είμαι ο Τάσος, web designer και creative developer. Συνδυάζω design, frontend και digital marketing για να δημιουργώ καθαρές, σύγχρονες και λειτουργικές εμπειρίες.</p>
+            <p>Μου αρέσει να μετατρέπω μια ιδέα σε κάτι απλό, χρήσιμο και ευχάριστο για τον άνθρωπο που θα το χρησιμοποιήσει.</p>
+          </div>
+        </div>
 
-  <div class="about-layout">
-    <div class="about-intro reveal">
-      <p class="about-lead">
-        ΣΚΕΦΤΟΜΑΙ. ΣΧΕΔΙΑΖΩ.
-        <span>ΔΗΜΙΟΥΡΓΩ.</span>
-      </p>
-
-      <div class="about-copy">
-        <p>
-          Είμαι ο Τάσος, web designer και creative developer.
-          Συνδυάζω design, frontend και digital marketing για να
-          δημιουργώ καθαρές, σύγχρονες και λειτουργικές εμπειρίες.
-        </p>
-
-        <p>
-          Μου αρέσει να μετατρέπω μια ιδέα σε κάτι απλό,
-          χρήσιμο και ευχάριστο για τον άνθρωπο που θα το χρησιμοποιήσει.
-        </p>
-      </div>
-    </div>
-
-    <button
-  class="profile-code reveal"
-  type="button"
-  aria-pressed="false"
-  aria-label="Πάτησε για να εμφανίσεις τη φωτογραφία του Τάσου"
->
-  <div class="profile-code-content">
-    <div class="profile-code-bar" aria-hidden="true">
-      <span></span><span></span><span></span>
-    </div>
-
-    <pre><code><span class="code-key">const</span> profile = {
+        <button class="profile-code reveal" type="button" aria-pressed="false" aria-label="Πάτησε για να εμφανίσεις τη φωτογραφία του Τάσου">
+          <div class="profile-code-content">
+            <div class="profile-code-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+            <pre><code><span class="code-key">const</span> profile = {
   <span class="code-property">name</span>: <span class="code-string">"Τάσος Τσουπάκης"</span>,
   <span class="code-property">role</span>: <span class="code-string">"Web Designer"</span>,
   <span class="code-property">focus</span>: [
     <span class="code-string">"Design"</span>,
     <span class="code-string">"Frontend"</span>,
     <span class="code-string">"Marketing"</span>
-  ],
-  <span class="code-property">photo</span>: <span class="code-string">"click to reveal"</span>
+  ]
 };</code></pre>
-  </div>
+          </div>
+          <img class="profile-image" src="assets/images/tasos-profile.png" alt="Ο Τάσος Τσουπάκης">
+        </button>
+      </div>
 
-  <img
-    class="profile-image"
-    src="assets/images/tasos-profile.png"
-    alt="Ο Τάσος Τσουπάκης"
-  >
-
-  <span class="profile-hint">πάτησε για φωτογραφία</span>
-</button>
-
-  <div class="skills skills-catalog reveal" id="skills">
-  <h3>Εργαλεία &amp; Δεξιότητες</h3>
-
-  <div class="skills-panel">
-    <div class="skills-column">
-      <span class="skill-item" style="--delay: 0">WordPress</span>
-      <span class="skill-item" style="--delay: 1">JavaScript</span>
-      <span class="skill-item" style="--delay: 2">Google Analytics</span>
-      <span class="skill-item" style="--delay: 3">Canva</span>
-      <span class="skill-item" style="--delay: 4">Διαχείριση Social Media</span>
-    </div>
-
-    <div class="skills-column">
-      <span class="skill-item" style="--delay: 5">Elementor</span>
-      <span class="skill-item" style="--delay: 6">SEO</span>
-      <span class="skill-item" style="--delay: 7">Google Ads</span>
-      <span class="skill-item" style="--delay: 8">Photoshop</span>
-      <span class="skill-item" style="--delay: 9">Διαχείριση Περιεχομένου</span>
-    </div>
-
-    <div class="skills-column">
-      <span class="skill-item" style="--delay: 10">HTML & CSS</span>
-      <span class="skill-item" style="--delay: 11">Google Search Console</span>
-      <span class="skill-item" style="--delay: 12">Google Business Profile</span>
-      <span class="skill-item" style="--delay: 13">Meta Ads</span>
-      <span class="skill-item" style="--delay: 14">HubSpot Email Marketing</span>
-    </div>
-  </div>
-</div>
-</section>
+      <div class="skills-catalog reveal" id="skills">
+        <h2>Εργαλεία &amp; Δεξιότητες</h2>
+        <div class="skills-panel">
+          <div class="skills-column">
+            <span class="skill-item"><span class="skill-label">WordPress</span></span>
+            <span class="skill-item"><span class="skill-label">JavaScript</span></span>
+            <span class="skill-item"><span class="skill-label">Google Analytics</span></span>
+            <span class="skill-item"><span class="skill-label">Canva</span></span>
+            <span class="skill-item"><span class="skill-label">Διαχείριση Social Media</span></span>
+          </div>
+          <div class="skills-column">
+            <span class="skill-item"><span class="skill-label">Elementor</span></span>
+            <span class="skill-item"><span class="skill-label">SEO</span></span>
+            <span class="skill-item"><span class="skill-label">Google Ads</span></span>
+            <span class="skill-item"><span class="skill-label">Photoshop</span></span>
+            <span class="skill-item"><span class="skill-label">Διαχείριση Περιεχομένου</span></span>
+          </div>
+          <div class="skills-column">
+            <span class="skill-item"><span class="skill-label">HTML &amp; CSS</span></span>
+            <span class="skill-item"><span class="skill-label">Google Search Console</span></span>
+            <span class="skill-item"><span class="skill-label">Google Business Profile</span></span>
+            <span class="skill-item"><span class="skill-label">Meta Ads</span></span>
+            <span class="skill-item"><span class="skill-label">HubSpot Email Marketing</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="contact" id="contact" aria-labelledby="contact-title">
       <div class="contact-decoration" aria-hidden="true">
-  <div class="contact-squares">
-    <i class="contact-square square-one"><span></span></i>
-    <i class="contact-square square-two"><span></span></i>
-    <i class="contact-square square-three"><span></span></i>
-  </div>
-
-  <div class="contact-line"></div>
-</div>
-  <div class="contact-main">
-    <h2 id="contact-title" class="reveal">
-      Ας δημιουργήσουμε<br>
-      κάτι <span class="gradient-text">ψηφιακό.</span>
-    </h2>
-
-    <div class="contact-links reveal">
-      <a href="mailto:tsoupakis14@gmail.com">
-        <span>Email</span>
-        <strong>tsoupakis14@gmail.com</strong>
-      </a>
-
-      <a href="tel:+306985018129">
-        <span>Τηλέφωνο</span>
-        <strong>+30 698 501 8129</strong>
-      </a>
-    </div>
-  </div>
-
-  <footer>
-
-    <p>
-      © <span id="current-year"></span>
-      · Τάσος Τσουπάκης
-    </p>
-  </footer>
-</section>
+        <div class="contact-squares">
+          <i class="contact-square square-one"><span></span></i>
+          <i class="contact-square square-two"><span></span></i>
+          <i class="contact-square square-three"><span></span></i>
+        </div>
+        <div class="contact-line"></div>
+      </div>
+      <div class="contact-main">
+        <h2 id="contact-title" class="reveal">Ας δημιουργήσουμε<br>κάτι <span class="gradient-text">ψηφιακό.</span></h2>
+        <div class="contact-links reveal">
+          <a href="mailto:tsoupakis14@gmail.com"><span>Email</span><strong>tsoupakis14@gmail.com</strong></a>
+          <a href="tel:+306985018129"><span>Τηλέφωνο</span><strong>+30 698 501 8129</strong></a>
+        </div>
+      </div>
+      <footer><p>© <span id="current-year"></span> · Τάσος Τσουπάκης</p></footer>
+    </section>
   </main>
-
 </body>
 </html>
