@@ -162,3 +162,35 @@
     }
   }
 })();
+/* Επαναφορά κίνησης κύκλου Hero */
+(() => {
+  const orbit = document.querySelector('.hero-orbit');
+
+  if (!orbit) return;
+
+  const updateOrbit = () => {
+    const angle = -35 + window.scrollY * 0.08;
+    const moveY = Math.min(window.scrollY * 0.015, 20);
+
+    orbit.style.setProperty(
+      'transform',
+      `translate3d(0, ${moveY}px, 0) rotate(${angle}deg)`,
+      'important'
+    );
+  };
+
+  window.addEventListener('scroll', updateOrbit, { passive: true });
+  updateOrbit();
+})();
+
+/* Αλλαγή μηνύματος στην κάρτα προφίλ */
+(() => {
+  const profileCard = document.querySelector('.profile-code');
+  const profileHint = document.querySelector('.profile-hint');
+
+  if (!profileCard || !profileHint) return;
+
+  profileCard.addEventListener('click', () => {
+    profileHint.textContent = profileCard.classList.contains('is-photo')
+  });
+})();
