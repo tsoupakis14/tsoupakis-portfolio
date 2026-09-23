@@ -742,3 +742,49 @@ h1, h2, h3, p { margin-top: 0; }
   }
   .reveal { opacity: 1; transform: none; }
 }
+/* Μήνυμα στην κάρτα φωτογραφίας */
+.profile-hint {
+  position: absolute;
+  z-index: 3;
+  right: 1rem;
+  bottom: 1rem;
+  padding: .4rem .65rem;
+  border-radius: 999px;
+  background: rgba(16, 24, 39, .78);
+  color: #fff;
+  font-family: "JetBrains Mono", monospace;
+  font-size: .72rem;
+  opacity: .78;
+  transition: opacity .3s var(--ease);
+}
+
+.profile-code:hover .profile-hint {
+  opacity: 1;
+}
+/* Επαναφορά έντονης κίνησης στα τετράγωνα του footer */
+.contact.is-decoration-visible .square-one {
+  animation: footer-square-one 5s 1.2s ease-in-out infinite alternate !important;
+}
+
+.contact.is-decoration-visible .square-two {
+  animation: footer-square-two 6s 1.35s ease-in-out infinite alternate !important;
+}
+
+.contact.is-decoration-visible .square-three {
+  animation: footer-square-three 4.7s 1.5s ease-in-out infinite alternate !important;
+}
+
+@keyframes footer-square-one {
+  from { transform: translate(-82%, -102%) rotate(-11deg); }
+  to { transform: translate(-74%, -112%) rotate(-5deg); }
+}
+
+@keyframes footer-square-two {
+  from { transform: translate(-10%, 4%) rotate(13deg); }
+  to { transform: translate(-20%, -8%) rotate(7deg); }
+}
+
+@keyframes footer-square-three {
+  from { transform: translate(-104%, 44%) rotate(-14deg); }
+  to { transform: translate(-94%, 30%) rotate(-7deg); }
+}
