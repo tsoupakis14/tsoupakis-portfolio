@@ -811,7 +811,6 @@ h1, h2, h3, p { margin-top: 0; }
 /* Η οδηγία για τη φωτογραφία ως μέρος του κώδικα */
 .code-action {
   color: #63ddff;
-  text-decoration: underline;
   text-decoration-color: rgba(99, 221, 255, .45);
 }
 
