@@ -788,3 +788,23 @@ h1, h2, h3, p { margin-top: 0; }
   from { transform: translate(-104%, 44%) rotate(-14deg); }
   to { transform: translate(-94%, 30%) rotate(-7deg); }
 }
+/* Τα τετράγωνα του footer να φαίνονται πάντα */
+.contact-squares {
+  z-index: 1;
+}
+
+.contact-square {
+  opacity: 1 !important;
+}
+
+.square-one {
+  transform: translate(-82%, -102%) rotate(-11deg);
+}
+
+.square-two {
+  transform: translate(-10%, 4%) rotate(13deg);
+}
+
+.square-three {
+  transform: translate(-104%, 44%) rotate(-14deg);
+}
